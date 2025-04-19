@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Inter', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -47,7 +48,109 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.navegacao {
+.navegacao ul {
   display: flex;
-  
+  margin: 2vw 6vw;
+  color: black; 
 }
+.navegacao {
+	border-bottom: 2px solid green;
+	margin:0 0 20px ;
+	
+}
+.navegacao .ifbooks {
+	
+}
+.navegacao span {
+	color: #27AE60;
+	
+}
+.menu-links {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .menu-links li {
+	font-size: 1rem;
+  }
+  
+  .ifbooks span {
+	color: #27AE60;
+	font-weight: bold;
+  }
+  
+  .menu-icones {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 30px;
+  }
+  
+  .icon {
+	width: 24px;
+	height: auto;
+  }
+  
+  .pauzinho {
+	height: 30px;
+	width: 2px;
+	background-color: #27AE60;
+  }
+  .pauzinho1 {
+	height: 30px;
+	width: 2px;
+	background-color: #27AE60;
+	margin-top: 40px;
+	margin-left: 20px;
+  }
+ul li {
+	margin: 3vw 2vw 0 2vw;
+	border-left: 2px #27AE60;
+}
+li a {
+	text-decoration: none;
+	color: black;
+}
+section div {
+	margin: 12vw 10.2vw;
+	
+}
+section h4 {
+	margin: 0vw 0vw 3.5vw 0;
+	border: solid #27AE60 1.8px;
+	border-radius: 4px;
+	color: #27AE60;
+	width: 10vw;
+	padding: 12px 12px;
+}
+section h1 {
+	font-weight: bold;
+	font-size: 3.3vw;
+	margin: 1vw 0 3vw;
+	color: #382C2C;
+}
+section p {
+	margin: 0 0 3vw; 
+}
+section button {
+	border: solid #27AE60;
+	padding: 1vw 2vw;
+	border-radius: 4px;
+	background-color: #27AE60;
+	color: #FFFFFF;
+	
+}
+section {
+	display: flex;
+}
+section div img {
+	height: 42.5vw;
+	margin: 0 0 19vw ;
+}
+section .livro {
+	margin: 10px;
+}
+
