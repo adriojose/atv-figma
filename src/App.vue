@@ -73,7 +73,7 @@
                 </div>
           </section>
           <div class="borda2"></div>
-          <section>
+          
                 <h2>
                     Lançamentos
                 </h2>
@@ -82,26 +82,60 @@
                   <img src="/src/assets/livro.png" alt="livro.png">
                   <h3>Chain of Iron: Volume 2</h3>
                   <p>Cassandra Clare</p>
-                  <p>R$23.24</p>
-                  <button>comprar</button>
+                  <p class="preco">R$23.24</p>
+                  <button>Comprar</button>
                 </div>
                 <div class="item">
                   <img src="/src/assets/livro2.png" alt="livro2.png">
                   <h3>Chain of Thorns</h3>
                   <p>Cassandra Clare</p>
-                   <p>R$23.24</p>
-                  <button>comprar</button>
+                   <p class="preco">R$23.24</p>
+                  <button><i class="fa-solid fa-cart-shopping"></i> Comprar</button>
                 </div>
                 <div class="item">
-                  <img src="" alt="">
+                  <img src="/src/assets/livro3.png" alt="livro3.png">
+                  <h3>City of Fallen Angels</h3>
+                  <p>Cassandra Clare</p>
+                  <p class="preco">R$13.94</p>
+                  <button>Comprar</button>
                 </div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item">
+                  <img src="/src/assets/livro4.png" alt="livro4.png">
+                  <h3>Nona the Ninth</h3>
+                  <p>Cassandra Clare</p>
+                  <p class="preco">R$16.84</p>
+                  <button>Comprar</button>
+                </div>
+                <div class="item">
+                  <img src="/src/assets/livro5.png" alt="livro5.png">
+                  <h3>Harlem Shuffle</h3>
+                  <p>Colson Whitehead</p>
+                  <p class="preco">R$26.92</p>
+                  <button>Comprar</button>
+                </div>
+                <div class="item">
+                  <img src="/src/assets/livro6.png" alt="livro6.png">
+                  <h3>Two Old Women</h3>
+                  <p>Velma Wallis</p>
+                  <p class="preco">R$13.95</p>
+                  <button>Comprar</button>
+                </div>
+                <div class="item">
+                  <img src="/src/assets/livro7.png" alt="livro7.png">
+                  <h3>Carrie Soto Is Back</h3>
+                  <p>Taylor Jenkins Reid</p>
+                  <p class="preco">R$26.04</p>
+                  <button>Comprar</button>
+                </div>
+                <div class="item">
+                  <img src="/src/assets/livro8.png" alt="livro8.png">
+                  <h3>Book Lovers</h3>
+                  <p>Emily Henry</p>
+                  <p class="preco">R$15.81</p>
+                  <button>Comprar</button>
+                </div>
                </div>
-          </section>
+        
          
     </main>     
   </body>

@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Inter', sans-serif;
+	margin: 0;
 }
 ol, ul {
 	list-style: none;
@@ -190,14 +191,44 @@ h2 {
 	font-size: 2.5vw;
 	color: #231F2D;
 	font-weight: bold;
-	margin: 0vw 18vw 0vw 10vw;
+	margin-left: 8vw;
 	margin-top: 6vw;
 }
 .container {
 	display: grid;
-	grid-template-columns: 200px 200px;
-	gap: 35vh;
-	margin-left: 40px;
+	grid-template-columns: 200px 200px 200px 200px;
+	gap: 15vh;
+	margin-left: 16vh;
+	margin-top: 10vh;
+}
+.container img {
+	width: 270px;
+	height: 370px;
+}
+.item h3 {
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 23.5px;
+	white-space: nowrap;
+	color: #382C2C;
+}
+.item p {
+	margin-top: 13px;
+}
+.preco {
+	margin-top: 40px;
+	font-size: 20px;
+	color: #382C2C;
+}
+.item button {
+	margin-top: 32px;
+	width: 19.5vw;
+	height: 3vw;
+	color: #FFFFFF;
+	background-color: #27AE60;
+	border: solid #27AE60;
+	font-size: 16px;
+	font-family: Inter;
 }
 
 
