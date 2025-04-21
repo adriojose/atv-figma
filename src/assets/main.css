@@ -193,26 +193,17 @@ h2 {
 	margin: 0vw 18vw 0vw 10vw;
 	margin-top: 6vw;
 }
-.livros {
-	margin: 13vw 49vw 18vw 0vw;
+.container {
+	display: grid;
+	grid-template-columns: 200px 200px;
+	gap: 35vh;
+	margin-left: 40px;
 }
-.button2 {
-	border: solid #27AE60;
-	padding: 1vw 8vw;
-	border-radius: 2px;
-	background-color: #27AE60;
-	color: #FFFFFF;
-	font-size: 17px;
-}
-.livros {
-	display: flex;
-	margin-right: 20vw;
-	
-}
-.livro1 {
-	width: 130px;
-	
-}
+
+
+
+
+
 
 
 

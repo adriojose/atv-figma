@@ -77,22 +77,30 @@
                 <h2>
                     Lançamentos
                 </h2>
-                <div class="livros">
-                   <div class="livro1">
-                    <img src="/src/assets/livro.png" alt="livro.png">
-                    <h3>Chain of Iron: Volume 2</h3>
-                    <p>Cassandra Clare</p>
-                    <p>R$23.24</p>
-                  <button class="button2">comprar</button>
-                   </div>   
-                   <div class="livro1">
-                    <img src="/src/assets/livro2.png" alt="livro2.png">
-                    <h3>Chain of Thorns</h3>
-                    <p>Cassandra Clare</p>
-                    <p>R$23.24</p>
-                   <button class="button2">comprar</button>
-                   </div>
-                </div>                
+               <div class="container">
+                <div class="item">
+                  <img src="/src/assets/livro.png" alt="livro.png">
+                  <h3>Chain of Iron: Volume 2</h3>
+                  <p>Cassandra Clare</p>
+                  <p>R$23.24</p>
+                  <button>comprar</button>
+                </div>
+                <div class="item">
+                  <img src="/src/assets/livro2.png" alt="livro2.png">
+                  <h3>Chain of Thorns</h3>
+                  <p>Cassandra Clare</p>
+                   <p>R$23.24</p>
+                  <button>comprar</button>
+                </div>
+                <div class="item">
+                  <img src="" alt="">
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+               </div>
           </section>
          
     </main>     
