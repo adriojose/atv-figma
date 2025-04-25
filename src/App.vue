@@ -17,8 +17,9 @@
         </li>
         <div class="pauzinho1"></div>
         <li>
-          <span>Apreço a <br> leitura</span>
+          <span>Apreço a  leitura</span>
         </li>
+        <div class="barra-pesquisa">Pesquisar</div>
         <li>
             <a href="#">Termos</a>
         </li>
@@ -135,10 +136,26 @@
                   <button>Comprar</button>
                 </div>
                </div>
-        
-         
     </main>     
+    <footer>
+      <div class="contato">
+        <div class="footer-titulo">IFbooks</div>
+        <p><i class="fa-brands fa-square-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-square-twitter"></i></p>
+      </div>  
+        <div class="contato2">
+          <p>Contato</p>
+        <p>+55 47 40045263</p>
+        <p>8h às 23h - Seg a Sex</p>
+        <p>contato@ifbooks.com</p>
+        <p class="cartoes"><img src="/src/assets/paipal 1.png" alt="paipal 1"> <img src="/src/assets/MasterCard 1.png" alt="mastercard1"> <img src="" alt=""> <img src="/src/assets/VISA 1.png" alt="visa"></p>
+        </div>
+    </footer>
+    <div class="footer-borda"></div>
+   
+    
+   
   </body>
+
 </template>
 
 <style scoped>
