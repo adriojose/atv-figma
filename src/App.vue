@@ -1,18 +1,30 @@
 <script setup>
+import { ref } from 'vue';
+
+  const pagina = ref(0)
+  function hmpg(){
+    pagina.value = 0 
+  }
+  function carrinho(){
+    pagina.value = 1
+  }
+
+
+
 
 </script>
-
 <template>
   <body>
     
     <main>
       <header>
+        
   <nav class="navegacao">
    
      <ul>
         <li>
            <p>
-             <a href="#" class="ifbooks">IFbooks</a>
+             <a @click="hmpg()" class="ifbooks">IFbooks</a>
            </p>
         </li>
         <div class="pauzinho1"></div>
@@ -34,8 +46,8 @@
         
         </li>
      
-        <div class="menu-icones">
-      <img src="@/assets/carrinho.png" alt="carrinho" class="icon" />
+      <div class="menu-icones">
+          <a @click="carrinho()"><img src="@/assets/carrinho.png" alt="carrinho" class="icon" /></a>
       <div class="pauzinho"></div>
       <img src="@/assets/Heart.png" alt="coração" class="icon" />
       <div class="pauzinho"></div>
@@ -44,6 +56,7 @@
      </ul> 
   </nav>
 </header>
+    <div v-if="pagina == 0">
           <section>
             <div>
               <h4>
@@ -136,6 +149,22 @@
                   <button>Comprar</button>
                 </div>
                </div>
+          
+              </div>
+
+
+              <div class="little-car" v-if="pagina == 1">
+                <h2 class="titulo-carrinho">Carrinho</h2>
+
+                <div class="container-carrinho">
+                  <div class="titulos-carrinho">
+                    <h3>titulo</h3>
+                    <img src="/src/assets/livro.png" alt="livro.png">
+                    
+                  </div>
+               
+                </div>
+              </div>
     </main>     
     <footer>
       <div class="contato">
@@ -149,8 +178,12 @@
         <p>contato@ifbooks.com</p>
         <p class="cartoes"><img src="/src/assets/paipal 1.png" alt="paipal 1"> <img src="/src/assets/MasterCard 1.png" alt="mastercard1"> <img src="" alt=""> <img src="/src/assets/VISA 1.png" alt="visa"></p>
         </div>
+        
     </footer>
     <div class="footer-borda"></div>
+    <div class="footer-direitos">
+      <p>© Alguns direitos reservados. IFbooks 2025.</p>
+    </div>
    
     
    
