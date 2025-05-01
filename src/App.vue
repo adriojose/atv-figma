@@ -155,14 +155,20 @@ import { ref } from 'vue';
 
               <div class="little-car" v-if="pagina == 1">
                 <h2 class="titulo-carrinho">Carrinho</h2>
-
-                <div class="container-carrinho">
-                  <div class="titulos-carrinho">
-                    <h3>titulo</h3>
-                    <img src="/src/assets/livro.png" alt="livro.png">
-                    
-                  </div>
-               
+                <div class="livros-carrinho">
+                  <h3>Titulo</h3>
+                  <h3>Quantidade</h3>
+                  <h3>Subtotal</h3> 
+                </div>
+                <div class="borda-carrinho"></div> 
+                <div class="valor-total">
+                  <img src="/src/assets/livro.png" alt="livro.png">
+                  <div class="descricao-carrinho">  
+                  <h3>Chain of Iron: Volume 2</h3>
+                  <p>Cassandra Clare</p>
+                  <p class="preco">R$23.24</p>
+                    </div>
+                  
                 </div>
               </div>
     </main>     

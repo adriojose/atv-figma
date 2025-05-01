@@ -282,12 +282,47 @@ footer {
 	color: #27AE60;
 }
 .titulo-carrinho {
-	display: grid;
+	margin-left: 7vw;
 }
+.borda-carrinho {
+	border-bottom: 0.2vw solid black;
+	margin-top: 1.5vw;
+	margin-left: 4vw;
+	margin-right: 4vw;
+}
+.livros-carrinho h3 {
+	margin-left: 8vw;
+	font-size: 2vw;
+	font-weight: bold;
+}
+.livros-carrinho {
+	margin-top: 6vw;
+}
+.valor-total img {
+	width: 10vw;
+	margin-left: 7vw;
+	margin-top: 3.5vw;
+}
+.livros-carrinho  {
+	display: grid;
+	grid-template-columns: 46vw 26vw 26vw;
+}
+.valor-total p {
+	margin-top: 1.5vw;
+}
+.valor-total {
+	display: grid;
+	grid-template-columns: 200px 200px 200px;
 
-
-
-
+}
+.valor-total h3 {
+	font-weight: bold;
+	font-size: 1.6vw;
+}
+.valor-total .descricao-carrinho {
+	margin-top: 3.5vw;
+	margin-left: 4vw;
+}
 
 
 
