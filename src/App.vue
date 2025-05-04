@@ -1,15 +1,58 @@
 <script setup>
-import { ref } from 'vue';
+ 
+  import { ref, computed } from 'vue'
 
-  const pagina = ref(0)
-  function hmpg(){
-    pagina.value = 0 
+const pagina = ref(0)
+function hmpg() {
+  pagina.value = 0 
+}
+function carrinho() {
+  pagina.value = 1
+}
+
+// Lista de livros (poderia vir de um JSON/fetch depois)
+const livros = ref([
+  { id: 1, titulo: "Chain of Iron: Volume 2", autor: "Cassandra Clare", preco: 23.24, img: "/src/assets/livro.png" },
+  { id: 2, titulo: "Chain of Thorns", autor: "Cassandra Clare", preco: 23.24, img: "/src/assets/livro2.png" },
+  { id: 3, titulo: "City of fallen ", autor: "Cassandra Clare", preco: 13.94, img: "/src/assets/livro3.png"},
+  { id: 4, titulo: "Nona the Ninth", autor: "Cassandra Clare", preco: 16.84, img: "/src/assets/livro4.png"},
+  { id: 5, titulo: "Harlem Shuffle", autor: "Colson Whitehead", preco: 26.92, img: "/src/assets/livro5.png"},
+  { id: 6, titulo: "Two Old Women", autor: "Velma Wallis", preco: 13.95, img: "/src/assets/livro6.png"},
+  { id: 7, titulo: "Carrie Soto Is Back", autor: "Taylor Jenkins Reid", preco: 26.04, img: "/src/assets/livro7.png"},
+  { id: 8, titulo: "Book Lovers", autor: "Emily Henry", preco: 15.81, img: "/src/assets/livro8.png"},
+  
+])
+
+// Carrinho reativo
+const carrinhoLivros = ref([])
+
+function adicionarAoCarrinho(livro) {
+  const existente = carrinhoLivros.value.find(item => item.id === livro.id)
+  if (existente) {
+    existente.quantidade += 1
+  } else {
+    carrinhoLivros.value.push({ ...livro, quantidade: 1 })
   }
-  function carrinho(){
-    pagina.value = 1
+}
+
+function aumentarQuantidade(livro) {
+  livro.quantidade += 1
+}
+
+function diminuirQuantidade(livro) {
+  if (livro.quantidade > 1) {
+    livro.quantidade -= 1
+  } else {
+    carrinhoLivros.value = carrinhoLivros.value.filter(item => item.id !== livro.id)
   }
+}
+function limparCarrinho() {
+  carrinhoLivros.value = []
+}
 
-
+const total = computed(() => {
+  return carrinhoLivros.value.reduce((acc, livro) => acc + livro.preco * livro.quantidade, 0).toFixed(2)
+})
 
 
 </script>
@@ -91,64 +134,15 @@ import { ref } from 'vue';
                 <h2>
                     Lançamentos
                 </h2>
-               <div class="container">
-                <div class="item">
-                  <img src="/src/assets/livro.png" alt="livro.png">
-                  <h3>Chain of Iron: Volume 2</h3>
-                  <p>Cassandra Clare</p>
-                  <p class="preco">R$23.24</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro2.png" alt="livro2.png">
-                  <h3>Chain of Thorns</h3>
-                  <p>Cassandra Clare</p>
-                   <p class="preco">R$23.24</p>
-                  <button><i class="fa-solid fa-cart-shopping"></i> Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro3.png" alt="livro3.png">
-                  <h3>City of Fallen Angels</h3>
-                  <p>Cassandra Clare</p>
-                  <p class="preco">R$13.94</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro4.png" alt="livro4.png">
-                  <h3>Nona the Ninth</h3>
-                  <p>Cassandra Clare</p>
-                  <p class="preco">R$16.84</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro5.png" alt="livro5.png">
-                  <h3>Harlem Shuffle</h3>
-                  <p>Colson Whitehead</p>
-                  <p class="preco">R$26.92</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro6.png" alt="livro6.png">
-                  <h3>Two Old Women</h3>
-                  <p>Velma Wallis</p>
-                  <p class="preco">R$13.95</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro7.png" alt="livro7.png">
-                  <h3>Carrie Soto Is Back</h3>
-                  <p>Taylor Jenkins Reid</p>
-                  <p class="preco">R$26.04</p>
-                  <button>Comprar</button>
-                </div>
-                <div class="item">
-                  <img src="/src/assets/livro8.png" alt="livro8.png">
-                  <h3>Book Lovers</h3>
-                  <p>Emily Henry</p>
-                  <p class="preco">R$15.81</p>
-                  <button>Comprar</button>
-                </div>
-               </div>
+                <div class="container">
+  <div class="item" v-for="livro in livros" :key="livro.id">
+    <img :src="livro.img" :alt="livro.titulo" />
+    <h3>{{ livro.titulo }}</h3>
+    <p>{{ livro.autor }}</p>
+    <p class="preco">R${{ livro.preco.toFixed(2) }}</p>
+    <button @click="adicionarAoCarrinho(livro)">Comprar</button>
+  </div>
+</div>
           
               </div>
 
@@ -161,16 +155,36 @@ import { ref } from 'vue';
                   <h3>Subtotal</h3> 
                 </div>
                 <div class="borda-carrinho"></div> 
-                <div class="valor-total">
-                  <img src="/src/assets/livro.png" alt="livro.png">
-                  <div class="descricao-carrinho">  
-                  <h3>Chain of Iron: Volume 2</h3>
-                  <p>Cassandra Clare</p>
-                  <p class="preco">R$23.24</p>
-                    </div>
-                  
-                </div>
-              </div>
+                <div v-for="item in carrinhoLivros" :key="item.id" class="valor-total">
+  <!-- Coluna 1: título e autor -->
+  <div class="coluna">
+    <img :src="item.img" />
+    <h3>{{ item.titulo }}</h3>
+    <p class="autor">{{ item.autor }}</p>
+    <p class="preco">R${{ item.preco }}</p>
+  </div>
+      
+  <!-- Coluna 2: botões de quantidade -->
+  <div class="coluna">
+    <div class="quantidade">
+      <button @click="diminuirQuantidade(item)">-</button>
+     <span>{{ item.quantidade }}</span> 
+      <button @click="aumentarQuantidade(item)">+</button>
+    </div>
+  </div>
+ 
+  <!-- Coluna 3: subtotal -->
+  <div class="coluna">
+    <p class="preco2">R${{ (item.preco * item.quantidade).toFixed(2) }}</p>
+  </div>
+</div>
+
+
+  <div class="total-final">
+    <h3 class="valor-final">Total: R${{ total }}</h3>
+    <button @click="limparCarrinho" class="botao-limpar">Limpar carrinho</button>
+  </div>
+</div>
     </main>     
     <footer>
       <div class="contato">

@@ -280,6 +280,7 @@ footer {
 }
 .titulo-carrinho{
 	color: #27AE60;
+	font-size: 3vw;
 }
 .titulo-carrinho {
 	margin-left: 7vw;
@@ -292,28 +293,23 @@ footer {
 }
 .livros-carrinho h3 {
 	margin-left: 8vw;
-	font-size: 2vw;
+	font-size: 2.3vw;
 	font-weight: bold;
 }
 .livros-carrinho {
 	margin-top: 6vw;
 }
 .valor-total img {
-	width: 10vw;
-	margin-left: 7vw;
+	width: 14vw;
+	margin-left: 4vw;
 	margin-top: 3.5vw;
 }
 .livros-carrinho  {
 	display: grid;
-	grid-template-columns: 46vw 26vw 26vw;
+	grid-template-columns: 27vw 25vw 22vw;
 }
 .valor-total p {
-	margin-top: 1.5vw;
-}
-.valor-total {
-	display: grid;
-	grid-template-columns: 200px 200px 200px;
-
+	margin-top: 1.3vw;
 }
 .valor-total h3 {
 	font-weight: bold;
@@ -321,11 +317,104 @@ footer {
 }
 .valor-total .descricao-carrinho {
 	margin-top: 3.5vw;
-	margin-left: 4vw;
+	margin-left: 8vw;
+}
+.valor-total {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* 3 colunas alinhadas com os títulos */
+	text-align: center;
+	align-items: center;
+	margin-top: 2vw;
+}
+.coluna h3 {
+	font-size: 2.3vw;
+	margin-right: 11vw;
+}
+.coluna p {
+	font-weight: bold;
+	margin-right: 11vw;
+	font-size: 1.5vw;
+} 
+  .valor-total .coluna {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .valor-total .quantidade {
+	display: flex;
+	gap: 0.5vw;
+	margin-left: 0.1vw;
+	border: solid 2px;
+  } 
+  .valor-total img {
+	width: 15vw;
+	margin-bottom: 0.5vw;
+	margin-right: 15vw;
+	margin-top: 2vw;
+  }
+   .quantidade {
+	margin-right: 15vw;
+	margin-bottom: 15vw;	
+  }
+
+ .quantidade button {
+	background: none;
+	border: none;
+	width: 4vw;
+	height: 3.5vw;
+	font-size: 1.4vw;	
+}
+.quantidade span {
+	text-align: center;
+	margin-top: 1vw;
+	font-size: 1.5vw;
+}
+.preco2 {
+	margin-bottom: 16vw;
+}
+.valor-total .preco2 {
+	margin-right: 31vw;
+	font-size: 2.3vw;
+}
+ .valor-final {
+	margin-left: 7vw;
+	margin-top: 5vw;
+	border: solid #27AE60 2px;
+	border-radius: 4px;
+	width: 12vw;
+	height: 4.3vw;
+	padding: 1.5vw 1vw;
 }
 
+.valor-total {
+	display: flex;
+	align-items: center; /* Alinha verticalmente */
+	justify-content: space-between;
+	border-bottom: 3px solid #ccc;
+	padding: 1vw 0;
+	margin-left: 4vw;
+	margin-right: 4vw;
+  }
+.valor-total .coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%; /* Garante que cada coluna ocupe o mesmo espaço */
+  margin-bottom: 2vw;
+}
+.botao-limpar {
+	margin-top: 4.9vw;
+  padding: 1vw 1vw;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 6vw;
+}
+.total-final {
+	display: flex;
 
-
-
-
-
+}
