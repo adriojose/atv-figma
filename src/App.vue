@@ -12,14 +12,14 @@ function carrinho() {
 
 // Lista de livros (poderia vir de um JSON/fetch depois)
 const livros = ref([
-  { id: 1, titulo: "Chain of Iron: Volume 2", autor: "Cassandra Clare", preco: 23.24, img: "/public/livro.png" },
-  { id: 2, titulo: "Chain of Thorns", autor: "Cassandra Clare", preco: 23.24, img: "/public/livro2.png" },
-  { id: 3, titulo: "City of fallen ", autor: "Cassandra Clare", preco: 13.94, img: "/public/livro3.png"},
-  { id: 4, titulo: "Nona the Ninth", autor: "Cassandra Clare", preco: 16.84, img: "/public/livro4.png"},
-  { id: 5, titulo: "Harlem Shuffle", autor: "Colson Whitehead", preco: 26.92, img: "/public/livro5.png"},
-  { id: 6, titulo: "Two Old Women", autor: "Velma Wallis", preco: 13.95, img: "/public/livro6.png"},
-  { id: 7, titulo: "Carrie Soto Is Back", autor: "Taylor Jenkins Reid", preco: 26.04, img: "/public/livro7.png"},
-  { id: 8, titulo: "Book Lovers", autor: "Emily Henry", preco: 15.81, img: "/public/livro8.png"},
+  { id: 1, titulo: "Chain of Iron: Volume 2", autor: "Cassandra Clare", preco: 23.24, img: "/livro.png" },
+  { id: 2, titulo: "Chain of Thorns", autor: "Cassandra Clare", preco: 23.24, img: "/livro2.png" },
+  { id: 3, titulo: "City of fallen ", autor: "Cassandra Clare", preco: 13.94, img: "/livro3.png"},
+  { id: 4, titulo: "Nona the Ninth", autor: "Cassandra Clare", preco: 16.84, img: "/livro4.png"},
+  { id: 5, titulo: "Harlem Shuffle", autor: "Colson Whitehead", preco: 26.92, img: "/livro5.png"},
+  { id: 6, titulo: "Two Old Women", autor: "Velma Wallis", preco: 13.95, img: "/livro6.png"},
+  { id: 7, titulo: "Carrie Soto Is Back", autor: "Taylor Jenkins Reid", preco: 26.04, img: "/livro7.png"},
+  { id: 8, titulo: "Book Lovers", autor: "Emily Henry", preco: 15.81, img: "/livro8.png"},
   
 ])
 
@@ -90,11 +90,11 @@ const total = computed(() => {
         </li>
      
       <div class="menu-icones">
-          <a @click="carrinho()"><img src="/public/carrinho.png" alt="carrinho" class="icon" /></a>
+          <a @click="carrinho()"><img src="/carrinho.png" alt="carrinho" class="icon" /></a>
       <div class="pauzinho"></div>
-      <img src="/public/Heart.png" alt="coração" class="icon" />
+      <img src="/Heart.png" alt="coração" class="icon" />
       <div class="pauzinho"></div>
-      <img src="/public/User.png" alt="usuário" class="icon" />
+      <img src="/User.png" alt="usuário" class="icon" />
     </div>
      </ul> 
   </nav>
@@ -114,18 +114,18 @@ const total = computed(() => {
                 <button>Acessar página do livro</button>
             </div>
             <div class="livro">
-              <img src="/public/book.png" alt="book.png">
+              <img src="/book.png" alt="book.png">
             </div>
           </section>
           <section class="borda">
                 <div class="selos">
-                  <img src="/public/Truck.png" alt="truck.png" class="selo">
+                  <img src="/Truck.png" alt="truck.png" class="selo">
                   <div class="texto">Frete grátis para SC</div>
                   <div class="traco"></div>
-                  <img src="/public/Star.png" alt="star.png" class="selo">
+                  <img src="/Star.png" alt="star.png" class="selo">
                   <div class="texto">Livros recomendados</div>
                   <div class="traco"></div>
-                  <img src="/public/Book open.png" alt="book.png" class="selo">
+                  <img src="/Book open.png" alt="book.png" class="selo">
                   <div class="texto2">Mais vendidos</div>   
                 </div>
           </section>
@@ -196,7 +196,7 @@ const total = computed(() => {
         <p>+55 47 40045263</p>
         <p>8h às 23h - Seg a Sex</p>
         <p>contato@ifbooks.com</p>
-        <p class="cartoes"><img src="/public/paipal 1.png" alt="paipal 1"> <img src="/public/MasterCard 1.png" alt="mastercard1"> <img src="" alt=""> <img src="/public/VISA 1.png" alt="visa"></p>
+        <p class="cartoes"><img src="/paipal 1.png" alt="paipal 1"> <img src="/MasterCard 1.png" alt="mastercard1"> <img src="" alt=""> <img src="/VISA 1.png" alt="visa"></p>
         </div>
         
     </footer>
